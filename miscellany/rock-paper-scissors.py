@@ -67,17 +67,17 @@ if __name__ == '__main__':
     rounds = 1
 
     while True:
-        user_option = choise_option()
+        user_option_result = choise_option()
 
-        if user_option is None:
+        if user_option_result is None:
             print("Opción inválida. Inténtelo de nuevo")
         else:
             print(f"\nRound #{rounds}")
             print("=" * 25)
-            computer_option = random.choice(options)
-            print(f"Opción de la máquina: {computer_option}. Opción del usuario: {user_option}")
+            computer_option_result = random.choice(options)
+            print(f"Opción de la máquina: {computer_option_result}. Opción del usuario: {user_option_result}")
 
-            values = rules_game(user_option, computer_option)
+            values = rules_game(user_option_result, computer_option_result)
 
             user_wins = user_wins + values[0]
             computer_wins = computer_wins + values[1]
