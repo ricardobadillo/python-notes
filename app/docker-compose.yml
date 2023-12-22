@@ -1,0 +1,7 @@
+services:
+  python-notes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
